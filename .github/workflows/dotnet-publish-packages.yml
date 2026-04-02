@@ -1,7 +1,11 @@
 name: dotnet-publish-packages
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - feature/responses-hosting
+    paths:
+      - '.github/workflows/dotnet-publish-packages.yml'
 
 permissions:
   contents: read
